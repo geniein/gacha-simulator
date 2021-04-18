@@ -23,7 +23,10 @@ export default class Banners extends Component {
           },
           wasBeginnersWishDisabled: false,
           isSettingsPageVisible: false
-        }
-    
+        }    
+      }
+      componentDidMount() {
+        this.toggleBeginnersWish(this.props.isBeginnersWishLimited)
+        this.setState({ selectedBanner: this.props.selectedBanner })
       }
 };
